@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OpenJSCAD.org</title>
+<link rel="shortcut icon" href="imgs/favicon.png" type="image/x-png">
+<link rel="stylesheet" href="jquery/themes/base/jquery-ui.css" />
+<script src="jquery/jquery-1.9.1.js"></script>
+<script src="jquery/jquery-ui.js"></script>
+
+<!-- MM: add support to save editor... -->
+<script src='./FileSaver.js'></script>
+
+<link rel="stylesheet" href="style_phone.css" type="text/css">
+<link rel="stylesheet" href="openjscad.css" type="text/css">
+</head><body onload="onload()">
+<style>
+/* we choose chrome theme for ace, and make sure line number is transparent too */
+/* this has to stay in the body (not head) otherwise does not take effect */
+.ace-chrome .ace_gutter { 
+   border-left: 2px dashed rgba(200,200,200,0.2);
+   background: none;
+}
+.ace-chrome {
+   font-size: 10pt;     // -- not 'px', but 'pt' for high dpi screens
+}
+</style>
+
+<style>
+p.ex1 {
+  margin-left: 10%;
+}
+</style>
+</head>
+<body>
+
+<img id="header" src="imgs/title.png">
+<br>
+<p class="ex1">
+<div style="margin-left:45px; width:100%;">
+<input type="hidden" value="https://edutekno.github.io/onlinescad/view.html?code=" id="myInput">
+<br>
+OpensCAD Code:<br><textarea id="myInput2" name="myInput2" rows="24" cols="80">cube(10);</textarea>
+<br>
+<button onclick="myFunction()">Generate and Copy Link</button><br>
+<input type="text" value="" id="output">
+<script>
+    function myFunction() {
+      var copyText = document.getElementById("myInput");
+      var copyText2 = document.getElementById("myInput2");
+      
+      var output = document.getElementById("output");
+      output.value = copyText.value + "" + copyText2.value ;
+      output.select();
+      document.execCommand("copy");
+	   alert("Link Copied...");
+
+    }
+</script>
+</div>
+</p>
+</body>
