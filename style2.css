@@ -29,6 +29,37 @@ a:visited {
    z-index: 20;
 }
 
+#titleright {
+  position: absolute;
+  right: 30px;
+  width: 600px;
+  height: 120px;
+  top: 0.5em;
+  text-align: right;
+  border: 0px solid blue;
+  text-decoration: none;
+   color: #293462;
+   font-weight: bold;
+    font-family: Impact, Charcoal, sans-serif;
+	font-family: Georgia,  serif;
+	font-size: 1.7em;
+} 
+#stitleright {
+  position: absolute;
+  right: 30px;
+  width: 600px;
+  height: 120px;
+  top: 2.5em;
+  text-align: right;
+  border: 0px solid blue;
+  text-decoration: none;
+   color: #F8B500;
+   font-weight: bold;
+    font-family: Georgia,  serif;
+	font-size: 1.2em;
+} 
+
+
 #editor { 
    width: 40%;
    top: 0px;
